@@ -57,6 +57,19 @@ $siteurl="http://pflasterpodcast.at";
       </div>
       <div class="posttext">
                  <p><?php the_content(__('(more...)')); ?></p>
+                 <div class="commentsd">
+                 <?php if ( is_home()  ) : ?>
+                 <div class="kommentlink">
+                 <a href="<?php echo get_permalink();?>"><h3>Hinterlasse eine Antwort</h3>
+                
+                <?php comments_number( 'noch keine antworten!', 'schon eine antwort!', '% antworten' ); ?>
+                    </a>
+                    </div>
+                 <?php endif; ?>
+                 
+                 <?php comments_template( $file, $separate_comments ); ?>
+                 
+                 </div>
       </div>           
                 <?php endwhile; else: ?> <div class="post">
                 <p><?php _e('Sorry, no posts matched your criteria.'); ?></p> 

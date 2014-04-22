@@ -11,11 +11,7 @@ Tags:
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@font-face{
-    font-family:'BananaBrick';
-    src:url('fonts/BBrick.ttf');
-}
-
+ 
  
  
 body{
@@ -38,11 +34,7 @@ h1#headtitle{
     margin-left:auto;
     line-height:0.7;
 }
-@media only screen and (max-width: 320px) {
 
-  h1#headtitle { font-size: 7em; }
-
-}
 a{
 text-decoration:none;
 color:#1982d1;
@@ -81,8 +73,8 @@ div#menue {
 div#menue a{
  height:3em;
 color:#888888;
-padding-left:3%;
-padding-right:3%;
+padding-left:1em;
+padding-right:1em;
 display:inline-block;
 line-height:3em;
 }
@@ -96,8 +88,9 @@ div#menue a:hover{
 }
 #dothingsbar{
    text-align:center;  
-   margin-top:1em;
-   margin-bottom:1em;
+   padding-top:1em;
+   padding-bottom:1em;
+   background-color:#E5DCBC;
 }
 .dothing  span{
      
@@ -139,7 +132,7 @@ border-radius:7px;
 
 .posthead {
     padding:1em;
-    padding-left:10%;
+    padding-left:20%;
     padding-right:10%;
     background-color:#555555;
      font-family: 'Arvo', serif;
@@ -196,6 +189,7 @@ td{
    padding-top: 50px;
     padding-bottom: .5em;
     padding:.5em;
+    border-bottom: 1px solid grey;
 }
 .date{width:100px;}
 .contributor-name{
@@ -204,4 +198,28 @@ td{
 }
 .kommentlink{
      text-align:center;
+}
+.nocomments{
+    display:none;
+}
+ td.social-cell{
+     border:0px;
+ }
+ img{border:0px}
+ @media only screen and (max-width: 960px) {
+
+  h1#headtitle { font-size: 7em; }
+.subscribe img { 
+ 
+height:70px; 
+} 
+
+div#menue a{
+  padding-left:.6em;
+padding-right:.6em;
+
+font-size:80%;
+
+}
+div#menue{ height:2.4em;}
 }

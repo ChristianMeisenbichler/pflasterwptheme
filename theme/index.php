@@ -10,7 +10,7 @@ $siteurl="http://pflasterpodcast.at";
 
       <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css"/>
       <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"  type="text/css"/>
-      <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+   
                      <?php wp_head(); ?>
 <script type="text/javascript">
 
@@ -29,19 +29,20 @@ $siteurl="http://pflasterpodcast.at";
     </head>
  <body>
       <div id="header"> <h1 id="headtitle"><a href="<?php echo $siteurl; ?>/">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/pflasterhead.svg" width=90%"/></a></h1>
-      <h2 id="subtitle"><?php bloginfo ( 'description' ); ?></h2>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/PPFLASTERheadentblodung.png" width="90%" alt="PFLASTER"/></a></h1>
+      <!--h2 id="subtitle"><?php bloginfo ( 'description' ); ?></h2-->
       </div>
       <div id="image">
         
       </div>
       <div id="menue">
-      <a href="<?php echo $siteurl; ?>/">Home</a>
-         <a href="<?php echo $siteurl; ?>/abonnieren/" class="<?php if(is_page('Abo'))   echo 'active' ;?>">Abo</a>
-         <a href="<?php echo $siteurl; ?>/archive/" class="<?php if(is_page('Archiv'))   echo 'active' ;?>">Archiv</a>
-         <a href="<?php echo $siteurl; ?>/personen/"class="<?php if(is_page('Personen'))   echo 'active' ;?>">Personen</a>
-         <a href="<?php echo $siteurl; ?>/Kontakt/"class="<?php if(is_page('Kontakt'))   echo 'active' ;?>">Kontakt</a>
-         <a href="<?php echo $siteurl; ?>/Spenden/"class="<?php if(is_page('Spenden'))   echo 'active' ;?>">Spenden</a>         
+      <a href="<?php echo $siteurl; ?>/">podcast</a>
+         <a href="<?php echo $siteurl; ?>/abonnieren/" class="menue <?php if(is_page('Abo'))   echo 'active' ;?>">abonnieren</a>
+       <a href="<?php echo $siteurl; ?>/konzept/" class="menue <?php if(is_page('Über Pflaster'))   echo 'active' ;?>">über pflaster</a>
+         <a href="<?php echo $siteurl; ?>/archive/" class="menue <?php if(is_page('Archiv'))   echo 'active' ;?>">archiv</a>
+         <a href="<?php echo $siteurl; ?>/personen/" class="menue <?php if(is_page('Personen'))   echo 'active' ;?>">personen</a>
+      
+         <a href="<?php echo $siteurl; ?>/Spenden/" class="menue <?php if(is_page('Spenden'))   echo 'active' ;?>">spenden</a>         
       </div>
       
         
@@ -60,9 +61,9 @@ $siteurl="http://pflasterpodcast.at";
                  <div class="commentsd">
                  <?php if ( is_home()  ) : ?>
                  <div class="kommentlink">
-                 <a href="<?php echo get_permalink();?>"><h3>Hinterlasse eine Antwort</h3>
+                 <a href="<?php echo get_permalink();?>"><h3>hinterlasse eine antwort</h3>
                 
-                <?php comments_number( 'noch keine antworten!', 'schon eine antwort!', '% antworten' ); ?>
+                <?php comments_number( '(noch keine antworten)', '(1 antwort)', '(% antworten)' ); ?>
                     </a>
                     </div>
                  <?php endif; ?>
@@ -85,5 +86,6 @@ $siteurl="http://pflasterpodcast.at";
          <div id="footer">
         ein podcast von christian meisenbichler stefan schmitzer
       </div>
+      <?php wp_footer(); ?>
     </body>
 </html>

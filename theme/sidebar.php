@@ -11,19 +11,19 @@
         <img alt="itunes" title="Subscribe with iTunes or Apple Podcasts" src="<?php echo get_template_directory_uri(); ?>/img/mzl.qrcxskir.175x175-75.jpg"/>
         </a>
         
-        <a class="subscribe" href="podcast://pflasterpodcast.at/feed/aac-rss"/>
-        <img title="Subscribe to Podcast with Instacast or Android Apps"  src="<?php echo get_template_directory_uri(); ?>/img/mzl.qwbnszll.175x175-75.jpg"/></a>
+        <a class="subscribe" href="podcast://pflasterpodcast.at/feed/aac-rss">
+        <img alt="" title="Subscribe to Podcast with Instacast or Android Apps"  src="<?php echo get_template_directory_uri(); ?>/img/mzl.qwbnszll.175x175-75.jpg"/></a>
         
         <a class="subscribe" href="http://pck.at">
-         <img title="Lerne mehr über Podcasts"  id="pck" 
-         src="<?php echo get_template_directory_uri(); ?>/img/pck.png"/>
+         <img alt="" title="Lerne mehr über Podcasts"  id="pck" 
+         src="<?php echo get_template_directory_uri(); ?>/img/pcklong.png"/>
        </a>
        
           <a class="subscribe" href="https://twitter.com/PflasterPodcast">
-        <img title="Pflaster auf Twitter" src="<?php echo get_template_directory_uri(); ?>/img/twitter.jpg "/></a>
+        <img alt="" title="Pflaster auf Twitter" src="<?php echo get_template_directory_uri(); ?>/img/twitter.jpg "/></a>
         
          <a class="subscribe" href="https://www.facebook.com/pages/Pflaster/445284115551748">
-        <img title="Pflaster auf Facebook" src="<?php echo get_template_directory_uri(); ?>/img/fb.jpg"/></a>
+        <img alt="" title="Pflaster auf Facebook" src="<?php echo get_template_directory_uri(); ?>/img/fb.jpg"/></a>
         </div> 
 </div>
      

@@ -132,13 +132,34 @@ border-radius:7px;
 
 .posthead {
     padding:1em;
-    padding-left:20%;
-    padding-right:10%;
+    padding-left:1%;
+    padding-right:1%;
     background-color:#555555;
      font-family: 'Arvo', serif;
      border-bottom-style:double;
      
 }
+.posthead h1{
+    display:inline-block;
+    max-width:80%;
+   margin:0em;
+   margin-top:0;
+}
+.posthead .prev a{
+    font-size:400%;
+    font-weight:bold;  
+    padding-right:10%;
+    line-height:.7;
+    float:left
+}
+.posthead .next a{
+    font-size:400%;
+    font-weight:bold;  
+     
+    line-height:.7;
+    float:right
+}
+h1.alone{padding-left:15%;}
 
 .posthead a {color:#131313;}
 

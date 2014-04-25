@@ -37,12 +37,12 @@ $siteurl="http://pflasterpodcast.at";
       </div>
       <div id="menue">
       <a href="<?php echo $siteurl; ?>/">podcast</a>
-         <a href="<?php echo $siteurl; ?>/abonnieren/" class="menue <?php if(is_page('Abo'))   echo 'active' ;?>">abonnieren</a>
-       <a href="<?php echo $siteurl; ?>/konzept/" class="menue <?php if(is_page('Über Pflaster'))   echo 'active' ;?>">über pflaster</a>
-         <a href="<?php echo $siteurl; ?>/archive/" class="menue <?php if(is_page('Archiv'))   echo 'active' ;?>">archiv</a>
-         <a href="<?php echo $siteurl; ?>/personen/" class="menue <?php if(is_page('Personen'))   echo 'active' ;?>">personen</a>
+         <a href="<?php echo $siteurl; ?>/abonnieren/" class="menue <?php if(is_page('abo'))   echo 'active' ;?>">abonnieren</a>
+       <a href="<?php echo $siteurl; ?>/konzept/" class="menue <?php if(is_page('über pflaster'))   echo 'active' ;?>">über pflaster</a>
+         <a href="<?php echo $siteurl; ?>/archive/" class="menue <?php if(is_page('archiv'))   echo 'active' ;?>">archiv</a>
+         <a href="<?php echo $siteurl; ?>/personen/" class="menue <?php if(is_page('personen'))   echo 'active' ;?>">personen</a>
       
-         <a href="<?php echo $siteurl; ?>/Spenden/" class="menue <?php if(is_page('Spenden'))   echo 'active' ;?>">spenden</a>         
+         <a href="<?php echo $siteurl; ?>/Spenden/" class="menue <?php if(is_page('spenden'))   echo 'active' ;?>">spenden</a>         
       </div>
       
         
@@ -53,8 +53,12 @@ $siteurl="http://pflasterpodcast.at";
   
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <div class="posthead">
-                 <a href="<?php echo get_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
-                  
+                <span class="prev" ><?php if (!is_home() & ! is_page()){previous_post('% ','‹','no' );} else echo"<a/>";?> </span>
+                 <a href="<?php echo get_permalink(); ?>">
+                 
+                 <h1 <?php if(is_home() | is_page()) {echo'class="alone"';}?> ><?php the_title(); ?></h1></a>
+                 
+                   <span class="next" ><?php if (!is_home()& ! is_page()){next_post('%','›','no'); }?> </span>
       </div>
       <div class="posttext">
                  <p><?php the_content(__('(more...)')); ?></p>
@@ -84,7 +88,7 @@ $siteurl="http://pflasterpodcast.at";
 <?php endif; ?>
 
          <div id="footer">
-        ein podcast von christian meisenbichler stefan schmitzer
+        ein podcast von christian meisenbichler und stefan schmitzer
       </div>
       <?php wp_footer(); ?>
     </body>

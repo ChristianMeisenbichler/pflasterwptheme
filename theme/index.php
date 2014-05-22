@@ -5,7 +5,7 @@ $siteurl="http://pflasterpodcast.at";
         xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
       xmlns="http://www.w3.org/1999/xhtml">
     <head>
-      <title> <?php  bloginfo ( 'name' ); ?> | <?php  bloginfo ( 'description' ); ?></title>
+      <title> <?php  bloginfo ( 'name' ); ?> | <?php if (!is_home()){the_title();}else{ bloginfo ( 'description' );} ?></title>
       <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico" />
 
       <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet" type="text/css"/>
@@ -83,7 +83,7 @@ $siteurl="http://pflasterpodcast.at";
 </div>
                 <div id="delimiter">
         </div>   <?php if ( is_home()  ) : ?>
-        <div id="moreepisodes">ältere episoden sind im <a href="/archive">archiv</a></div>
+        <div id="moreepisodes">ältere episoden sind im <a href="/archive/">archiv</a></div>
         
 <?php endif; ?>
 
